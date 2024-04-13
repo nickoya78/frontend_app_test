@@ -7,7 +7,7 @@ const LoginPage: React.FunctionComponent = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('http://localhost:3000/api/users/login', { email, password });
+      const response = await axios.post('http://localhost:8080/api/users/login', { email, password });
       console.log('Logged in successfully:', response.data);
       // Handle storing JWT token and redirecting the user
     } catch (error) {
