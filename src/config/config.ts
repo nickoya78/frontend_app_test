@@ -1,0 +1,1 @@
+export const BASE_URL = 'http://backend-test-app-env.eba-kgsm3q4m.us-west-1.elasticbeanstalk.com/api';

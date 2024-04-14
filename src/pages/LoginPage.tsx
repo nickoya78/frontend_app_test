@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { BASE_URL } from '../config/config';
 
 const LoginPage: React.FunctionComponent = () => {
   const [email, setEmail] = useState('');
@@ -7,7 +8,7 @@ const LoginPage: React.FunctionComponent = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('http://localhost:8080/api/users/login', { email, password });
+      const response = await axios.post(`${BASE_URL}/users/login`, { email, password });
       console.log('Logged in successfully:', response.data);
       // Handle storing JWT token and redirecting the user
     } catch (error) {
