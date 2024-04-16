@@ -22,6 +22,6 @@ describe('RegisterPage', () => {
     fireEvent.click(getByText('Register'));
 
     await waitFor(() => expect(mockedAxios.post).toHaveBeenCalledTimes(1));
-    expect(mockedAxios.post).toHaveBeenCalledWith('http://backendtest.nickapp.net/api/users/register', { email: 'test@example.com', password: 'password' });
+    expect(mockedAxios.post).toHaveBeenCalledWith('http://localhost:8080/api/users/register', { email: 'test@example.com', password: 'password' });
   });
 });
