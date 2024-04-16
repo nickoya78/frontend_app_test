@@ -1,7 +1,6 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
-import { BASE_URL } from '../config/config';
 
 const RegisterPage: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -9,7 +8,7 @@ const RegisterPage: React.FC = () => {
 
   const handleRegister = async () => {
     try {
-      const response = await axios.post(`${BASE_URL}/users/register`, { email, password });
+      const response = await axios.post("http://localhost:8080/api/users/register", { email, password });
       console.log('Registration successful. Please check your email.', response.data);
     } catch (error) {
         console.error('An error occurred while registering:', error);
