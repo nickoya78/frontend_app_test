@@ -35,4 +35,4 @@ jobs:
 
       - name: Deploy to S3
         run: |
-          aws s3 sync build/ s3://frontend-app-test
+          aws s3 sync build/ s3://frontend.testing
