@@ -8,7 +8,7 @@ const RegisterPage: React.FC = () => {
 
   const handleRegister = async () => {
     try {
-      const response = await axios.post("http://localhost:8080/api/users/register", { email, password });
+      const response = await axios.post("http://backend-test-app-env.eba-kgsm3q4m.us-west-1.elasticbeanstalk.com/api/users/register", { email, password });
       console.log('Registration successful. Please check your email.', response.data);
     } catch (error) {
         console.error('An error occurred while registering:', error);
