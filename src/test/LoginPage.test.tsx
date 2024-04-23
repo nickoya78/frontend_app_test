@@ -22,6 +22,6 @@ describe('LoginPage', () => {
     fireEvent.click(getByText('Login'));
 
     await waitFor(() => expect(mockedAxios.post).toHaveBeenCalledTimes(1));
-    expect(mockedAxios.post).toHaveBeenCalledWith('http://localhost:8080/api/users/login', { email: 'test@example.com', password: 'password' });
+    expect(mockedAxios.post).toHaveBeenCalledWith('http://backend-test-app-env.eba-kgsm3q4m.us-west-1.elasticbeanstalk.com/api/users/login', { email: 'test@example.com', password: 'password' });
   });
 });
